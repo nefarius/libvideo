@@ -52,7 +52,7 @@ namespace VideoLibrary.Debug
                         Console.WriteLine($"Link #{i + 1}");
                         foreach (var v in videoInfos)
                         {
-                            Console.WriteLine(v.Uri);
+                            Console.WriteLine(v.GetUri());
                             Console.WriteLine();
                         }
                     }
@@ -73,7 +73,7 @@ namespace VideoLibrary.Debug
                     string query = queries[i];
 
                     var video = cli.GetVideo(query);
-                    string uri = video.Uri;
+                    string uri = video.GetUri();
 
                     try
                     {
